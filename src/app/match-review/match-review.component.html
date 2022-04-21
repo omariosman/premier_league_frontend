@@ -1,0 +1,42 @@
+  
+
+    <h2 class="form-heading">Review Match</h2>
+    <!-- form -->
+    <form class = "form-body" [formGroup]="form" id="form-body-id">
+  
+      <!-- Username -->
+      <p class = "label-above-text-box">Username</p>
+      <div >
+          <input formControlName="username" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+      </div>
+
+
+      <!-- Rating -->
+      <p class = "label-above-text-box">Rating</p>
+      <div >
+          <input formControlName="rating" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+      </div>
+  
+      <!-- Review -->
+      <p class = "label-above-text-box">Review</p>
+      <div >
+          <input formControlName="review" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+      </div>
+  
+
+
+    </form>
+  
+  
+    <button class="send-button" (click)="onSubmit()">
+      <div *ngIf="isSubmitted; else elseBlock">SUBMITTED!</div>
+      <ng-template #elseBlock>SUBMIT</ng-template>
+    </button>
+  
+  <div class="submission_recorded">
+    <p *ngIf="isSubmitted" class="btn btn-success">Your Submission has been recorded.</p>
+  </div>
+
+
+  
+  

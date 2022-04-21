@@ -1,0 +1,16 @@
+<div class="container">
+    <ul>
+        <li *ngFor="let match of all_matches; let i = index">
+            <a [routerLink]="['/match', match[5], match[14], match[15]]" >{{ match[14]  }} VS {{ match[15] }} | {{match[5]}}</a>
+        </li>
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+
