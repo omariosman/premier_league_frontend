@@ -1,0 +1,53 @@
+  
+
+<h2 class="form-heading">Insert Fan</h2>
+    <!-- form -->
+    <form class = "form-body" [formGroup]="form" id="form-body-id">
+  
+      <!-- Username -->
+      <p class = "label-above-text-box">Username</p>
+      <div >
+          <input formControlName="username" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+      </div>
+
+
+      <!-- email -->
+      <p class = "label-above-text-box">email</p>
+      <div >
+          <input formControlName="email" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+      </div>
+  
+      <!-- gender -->
+      <p class = "label-above-text-box">gender</p>
+      <div >
+          <input formControlName="gender" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+      </div>
+  
+      <!-- birthdate -->
+      <p class = "label-above-text-box">birthdate</p>
+      <div >
+          <input formControlName="birthdate" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+      </div>
+
+
+    <!-- favorite_team -->
+    <p class = "label-above-text-box">favorite_team</p>
+    <div >
+        <input formControlName="favorite_team" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+    </div>
+
+    </form>
+  
+  
+    <button class="send-button" (click)="onSubmit()">
+      <div *ngIf="isSubmitted; else elseBlock">SUBMITTED!</div>
+      <ng-template #elseBlock>SUBMIT</ng-template>
+    </button>
+  
+  <div class="submission_recorded">
+    <p *ngIf="isSubmitted" class="btn btn-success">Your Submission has been recorded.</p>
+  </div>
+
+
+  
+  

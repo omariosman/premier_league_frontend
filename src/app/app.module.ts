@@ -10,13 +10,18 @@ import { MatchReviewComponent } from './match-review/match-review.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ShowMatchReviewComponent } from './show-match-review/show-match-review.component';
+import { InsertFanComponent } from './insert-fan/insert-fan.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MatchesComponent,
-    MatchReviewComponent
+    MatchReviewComponent,
+    ShowMatchReviewComponent,
+    InsertFanComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +31,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,29 @@
+<div class="container">
+    <h3>{{home_team}} VS {{away_team}} | {{match_date}}</h3>
+    <ul>
+        <li *ngFor="let match_review of matches_reviews; let i = index">
+            <div>
+                <p>Username: {{match_review[0]}}</p>    
+            </div>
+
+            <div>
+                <p>Rating: {{match_review[1]}}</p>
+            </div>
+
+            <div>
+                <p>Review: {{match_review[2]}}</p>
+            </div>
+
+
+        </li>
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+

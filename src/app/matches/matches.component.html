@@ -1,7 +1,13 @@
 <div class="container">
     <ul>
         <li *ngFor="let match of all_matches; let i = index">
-            <a [routerLink]="['/match', match[5], match[14], match[15]]" >{{ match[14]  }} VS {{ match[15] }} | {{match[5]}}</a>
+            <a>{{ match[14]  }} VS {{ match[15] }} | {{match[5]}}</a>
+            <a class="btn btn-primary" [routerLink]="['/match', match[5], match[14], match[15]]">
+                Insert Review
+            </a>
+            <a class="btn btn-success" [routerLink]="['/show_match_review', match[5], match[14], match[15]]">
+                Show Review
+            </a>
         </li>
     </ul>
 
