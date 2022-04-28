@@ -13,6 +13,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ShowMatchReviewComponent } from './show-match-review/show-match-review.component';
 import { InsertFanComponent } from './insert-fan/insert-fan.component';
+import { NationalityComponent } from './nationality/nationality.component';
+import { ClubComponent } from './club/club.component';
+import { PlayerComponent } from './player/player.component';
+import { StadiumComponent } from './stadium/stadium.component';
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { InsertFanComponent } from './insert-fan/insert-fan.component';
     MatchesComponent,
     MatchReviewComponent,
     ShowMatchReviewComponent,
-    InsertFanComponent
+    InsertFanComponent,
+    NationalityComponent,
+    ClubComponent,
+    PlayerComponent,
+    StadiumComponent
   ],
   imports: [
     BrowserModule,

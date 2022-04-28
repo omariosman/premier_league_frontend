@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Choose a club</h2>
+    <select class='select-option'
+        #mySelect
+        (change)='onOptionsSelected(mySelect.value)'>
+        <option>Choose a club</option>
+    <option class='option' 
+    *ngFor='let club of clubs_array' 
+    [value]="club">{{club}}</option>
+    </select>
+</div>
+
+
+
+
+<div class="conatiner">
+    <div class="club-info" *ngFor="let club of club_info">
+        <p><strong>Club Name:</strong> {{club[0]}}</p>
+        <p><strong>Stadium Name:</strong> {{club[1]}}</p>
+        <p><strong>Website:</strong> {{club[2]}}</p>
+    </div>
+</div>

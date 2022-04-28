@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Choose a nationality</h2>
+    <select class='select-option'
+        #mySelect
+        (change)='onOptionsSelected(mySelect.value)'>
+        <option>Choose a nationality</option>
+    <option class='option' 
+    *ngFor='let option of nationality_array' 
+    [value]="option">{{option}}</option>
+    </select>
+</div>
+
+
+
+<div class="conatiner">
+    <div class="player-info" *ngFor="let player of players_info">
+        <p><strong>Name:</strong> {{player[0]}}</p>
+        <p><strong>Date of birth:</strong> {{player[1]}}</p>
+        <p><strong>Country:</strong> {{player[2]}}</p>
+        <p><strong>Season:</strong> {{player[3]}}</p>
+        <p><strong>Club:</strong> {{player[4]}}</p>
+
+    </div>
+</div>

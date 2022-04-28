@@ -21,7 +21,6 @@ export class MatchReviewComponent implements OnInit {
     username: new FormControl('', Validators.required),
     rating: new FormControl('', Validators.required),
     review: new FormControl('', Validators.required),
-
   });
 
   submission = {} as MatchReviewInterface;

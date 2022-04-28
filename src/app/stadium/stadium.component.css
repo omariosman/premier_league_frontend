@@ -1,0 +1,11 @@
+select {
+    margin-top: 50px;
+    width: 250px;
+    color: black !important;
+}
+
+:host ::ng-deep .stadium-info{
+    border: 3px solid black;
+    padding: 20px;
+    margin: 3rem 10rem;
+}
