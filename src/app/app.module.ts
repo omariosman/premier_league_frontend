@@ -17,6 +17,14 @@ import { NationalityComponent } from './nationality/nationality.component';
 import { ClubComponent } from './club/club.component';
 import { PlayerComponent } from './player/player.component';
 import { StadiumComponent } from './stadium/stadium.component';
+import { PlayersWithPositionComponent } from './players-with-position/players-with-position.component';
+import { TopTeamsComponent } from './top-teams/top-teams.component';
+import { TopTeamsMatchesWonComponent } from './top-teams-matches-won/top-teams-matches-won.component';
+import { TopTeamsHomeMatchesWonComponent } from './top-teams-home-matches-won/top-teams-home-matches-won.component';
+import { TopTeamsYellowCardsComponent } from './top-teams-yellow-cards/top-teams-yellow-cards.component';
+import { TopTeamsFoulsComponent } from './top-teams-fouls/top-teams-fouls.component';
+import { TopTeamsShotsComponent } from './top-teams-shots/top-teams-shots.component';
+import { TopTeamsSeasonComponent } from './top-teams-season/top-teams-season.component';
 
 
 @NgModule({
@@ -29,7 +37,15 @@ import { StadiumComponent } from './stadium/stadium.component';
     NationalityComponent,
     ClubComponent,
     PlayerComponent,
-    StadiumComponent
+    StadiumComponent,
+    PlayersWithPositionComponent,
+    TopTeamsComponent,
+    TopTeamsMatchesWonComponent,
+    TopTeamsHomeMatchesWonComponent,
+    TopTeamsYellowCardsComponent,
+    TopTeamsFoulsComponent,
+    TopTeamsShotsComponent,
+    TopTeamsSeasonComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Choose a position</h2>
+    <select class='select-option'
+        #mySelect
+        (change)='onOptionsSelected(mySelect.value)'>
+        <option>Choose a position</option>
+    <option class='option' 
+    *ngFor='let option of positions_array' 
+    [value]="option">{{option}}</option>
+    </select>
+</div>
+
+<div class="conatiner">
+    <div class="player-info" *ngFor="let player of players_info">
+        <p><strong>Name:</strong> {{player[0]}}</p>
+        <p><strong>Position:</strong> {{player[1]}}</p>
+        <p><strong>Height:</strong> {{player[2]}}</p>
+        <p><strong>Country:</strong> {{player[3]}}</p>
+        <p><strong>Date of birth:</strong> {{player[4]}}</p>
+        <p><strong>Weight:</strong> {{player[5]}}</p>
+
+    </div>
+</div>

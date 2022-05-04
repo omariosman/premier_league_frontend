@@ -1,0 +1,6 @@
+<div class="conatiner">
+    <h2>Top teams by shots</h2>
+    <div class="team-info" *ngFor="let team of top_teams_array; let i = index">
+        <p><strong>{{i+1}}:</strong> {{team[0]}}</p>
+    </div>
+</div>

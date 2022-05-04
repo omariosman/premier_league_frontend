@@ -25,6 +25,13 @@ export class MainServiceService {
   get_players_with_nationality_API = "http://localhost:8000/api/v1/get_players_with_nationality/";
 
 
+
+  positions_API = "http://localhost:8000/api/v1/get_positions/";
+
+
+  get_players_with_position_API = "http://localhost:8000/api/v1/get_players_with_position/";
+
+
   clubs_API = "http://localhost:8000/api/v1/get_clubs/";
 
 
@@ -119,7 +126,21 @@ export class MainServiceService {
 
   }
 
+
   
+
+  get_positions(): Observable<any>{
+    return this.http.get<any>(this.positions_API, {})
+
+  }
+
+
+  get_players_with_position(newResult: any): Observable<any> {
+    const jsonresult = JSON.stringify(newResult);
+    console.log("Res: ", jsonresult);
+    return this.http.post<any>(this.get_players_with_position_API, jsonresult);
+
+  }
   
 }
 
