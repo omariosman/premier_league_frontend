@@ -25,6 +25,7 @@ import { TopTeamsYellowCardsComponent } from './top-teams-yellow-cards/top-teams
 import { TopTeamsFoulsComponent } from './top-teams-fouls/top-teams-fouls.component';
 import { TopTeamsShotsComponent } from './top-teams-shots/top-teams-shots.component';
 import { TopTeamsSeasonComponent } from './top-teams-season/top-teams-season.component';
+import { MainComponentComponent } from './main-component/main-component.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { TopTeamsSeasonComponent } from './top-teams-season/top-teams-season.com
     TopTeamsYellowCardsComponent,
     TopTeamsFoulsComponent,
     TopTeamsShotsComponent,
-    TopTeamsSeasonComponent
+    TopTeamsSeasonComponent,
+    MainComponentComponent
   ],
   imports: [
     BrowserModule,

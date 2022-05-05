@@ -10,40 +10,40 @@ import { MatchReviewInterface } from './match-review/match-review-interface';
 })
 export class MainServiceService {
 
-  matches_API = "http://localhost:8000/api/v1/get_all_matches/";
+  matches_API = "http://localhost:8000/api/get_all_matches/";
 
 
-  insert_match_review_API = "http://localhost:8000/api/v1/insert_match_review/";
+  insert_match_review_API = "http://localhost:8000/api/insert_match_review/";
 
-  show_match_review_API = "http://localhost:8000/api/v1/show_match_review/";
+  show_match_review_API = "http://localhost:8000/api/show_match_review/";
 
-  insert_fan_API = "http://localhost:8000/api/v1/insert_fan/";
+  insert_fan_API = "http://localhost:8000/api/insert_fan/";
 
-  nationality_API = "http://localhost:8000/api/v1/get_nationality/";
-
-
-  get_players_with_nationality_API = "http://localhost:8000/api/v1/get_players_with_nationality/";
+  nationality_API = "http://localhost:8000/api/get_nationality/";
 
 
-
-  positions_API = "http://localhost:8000/api/v1/get_positions/";
-
-
-  get_players_with_position_API = "http://localhost:8000/api/v1/get_players_with_position/";
+  get_players_with_nationality_API = "http://localhost:8000/api/get_players_with_nationality/";
 
 
-  clubs_API = "http://localhost:8000/api/v1/get_clubs/";
+
+  positions_API = "http://localhost:8000/api/get_positions/";
 
 
-  get_club_info_API = "http://localhost:8000/api/v1/get_club_info/";
+  get_players_with_position_API = "http://localhost:8000/api/get_players_with_position/";
 
-  players_API = "http://localhost:8000/api/v1/get_players/";
 
-  get_player_info_API = "http://localhost:8000/api/v1/get_player_info/";
+  clubs_API = "http://localhost:8000/api/get_clubs/";
 
-  stadiums_API = "http://localhost:8000/api/v1/get_stadiums/";
 
-  get_stadium_info_API = "http://localhost:8000/api/v1/get_stadium_info/";
+  get_club_info_API = "http://localhost:8000/api/get_club_info/";
+
+  players_API = "http://localhost:8000/api/get_players/";
+
+  get_player_info_API = "http://localhost:8000/api/get_player_info/";
+
+  stadiums_API = "http://localhost:8000/api/get_stadiums/";
+
+  get_stadium_info_API = "http://localhost:8000/api/get_stadium_info/";
 
   constructor(private http: HttpClient) { }
 

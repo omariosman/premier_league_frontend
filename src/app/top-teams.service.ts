@@ -5,12 +5,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TopTeamsService {
-  top_teams_by_matches_won_API = "http://localhost:8000/api/v1/get_top_teams_by_matches_won/";
-  top_teams_by_home_matches_won_API = "http://localhost:8000/api/v1/get_top_teams_by_home_matches_won/";
-  top_teams_by_yellow_cards_API = "http://localhost:8000/api/v1/get_top_teams_by_yellow_cards/";
-  top_teams_by_shots_API = "http://localhost:8000/api/v1/get_top_teams_by_shots/";
-  top_teams_by_fouls_API = "http://localhost:8000/api/v1/get_top_teams_by_fouls/";
-  top_teams_by_season_API = "http://localhost:8000/api/v1/get_top_teams_by_season/";
+  top_teams_by_matches_won_API = "http://localhost:8000/api/get_top_teams_by_matches_won/";
+  top_teams_by_home_matches_won_API = "http://localhost:8000/api/get_top_teams_by_home_matches_won/";
+  top_teams_by_yellow_cards_API = "http://localhost:8000/api/get_top_teams_by_yellow_cards/";
+  top_teams_by_shots_API = "http://localhost:8000/api/get_top_teams_by_shots/";
+  top_teams_by_fouls_API = "http://localhost:8000/api/get_top_teams_by_fouls/";
+  top_teams_by_season_API = "http://localhost:8000/api/get_top_teams_by_season/";
 
 
   constructor(private http: HttpClient) { }

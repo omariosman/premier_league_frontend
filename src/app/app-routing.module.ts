@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClubComponent } from './club/club.component';
 import { InsertFanComponent } from './insert-fan/insert-fan.component';
+import { MainComponentComponent } from './main-component/main-component.component';
 import { MatchReviewComponent } from './match-review/match-review.component';
 import { MatchesComponent } from './matches/matches.component';
 import { NationalityComponent } from './nationality/nationality.component';
@@ -18,6 +19,7 @@ import { TopTeamsYellowCardsComponent } from './top-teams-yellow-cards/top-teams
 import { TopTeamsComponent } from './top-teams/top-teams.component';
 
 const routes: Routes = [
+  {path: "", component: MainComponentComponent},
   {path: "matches", component: MatchesComponent},
   {path: 'match/:id/:homeTeam/:awayTeam', component: MatchReviewComponent},
   {path: 'show_match_review/:id/:homeTeam/:awayTeam', component: ShowMatchReviewComponent},
