@@ -1,13 +1,18 @@
 <div class="container">
+    <h2 class="header">All Matches</h2>
+    <button class="button-9" routerLink="/">Go Back</button>
+
     <ul>
         <li *ngFor="let match of all_matches; let i = index">
+            <div class="parent">
             <a>{{ match[14]  }} VS {{ match[15] }} | {{match[5]}}</a>
-            <a class="btn btn-primary" [routerLink]="['/match', match[5], match[14], match[15]]">
+            <a class="rev-button-1 btn btn-primary" [routerLink]="['/match', match[5], match[14], match[15]]">
                 Insert Review
             </a>
-            <a class="btn btn-success" [routerLink]="['/show_match_review', match[5], match[14], match[15]]">
+            <a class="rev-button-2 btn btn-success" [routerLink]="['/show_match_review', match[5], match[14], match[15]]">
                 Show Review
             </a>
+        </div>
         </li>
     </ul>
 

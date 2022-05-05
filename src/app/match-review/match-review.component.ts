@@ -16,9 +16,11 @@ export class MatchReviewComponent implements OnInit {
   match_date: any;
   home_team: any;
   away_team: any;
+  username_input: any;
+  all_users: any;
 
   form = new FormGroup({
-    username: new FormControl('', Validators.required),
+    //username: new FormControl('', Validators.required),
     rating: new FormControl('', Validators.required),
     review: new FormControl('', Validators.required),
   });
@@ -36,6 +38,10 @@ export class MatchReviewComponent implements OnInit {
     this.match_date = this.route.snapshot.paramMap.get('id');
     this.home_team = this.route.snapshot.paramMap.get('homeTeam');
     this.away_team = this.route.snapshot.paramMap.get('awayTeam');
+
+    this.mainSer.get_all_users().subscribe(data => {
+      this.all_users = data;
+    });
   }
 
 
@@ -70,7 +76,8 @@ export class MatchReviewComponent implements OnInit {
   }
 
   formResultRow() {
-    this.submission.username = this.form.get('username')?.value;
+    //this.submission.username = this.form.get('username')?.value;
+    this.submission.username = this.username_input;
     this.submission.rating = this.form.get('rating')?.value;
     this.submission.review = this.form.get('review')?.value;
     this.submission.match_date = this.match_date;
@@ -78,6 +85,17 @@ export class MatchReviewComponent implements OnInit {
     this.submission.away_team = this.away_team;
 
   } 
+
+  onOptionsSelected(value:string){
+    console.log("the selected value is " + value);
+    this.username_input = value;
+    /*this.mainSer.get_club_info({"club_name": value}).subscribe(data => {
+      this.club_info = data;
+      console.log(this.club_info);
+    })
+    */
+}
+
 
 }
 

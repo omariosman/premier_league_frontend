@@ -1,0 +1,55 @@
+:host ::ng-deep input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #3CBC8D;
+  color: white;
+  border: 2px solid #32ac64;
+  border-radius: 4px;
+  }
+
+  :host ::ng-deep .send-button, input[type=button], input[type=submit], input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+
+
+  :host ::ng-deep .header
+  {
+      background: #736f6f;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+  border-radius: 20px; 
+  border: 20px solid #bdb7b8;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+   -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+       animation: fadein 2s;
+  }
+  
+  @keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+
+  :host ::ng-deep .label-above-text-box {
+      font-weight: 600;
+      font-size: 20px;
+  }
+  
+.select-option{
+    padding: 20px;
+    color: #04AA6D;
+    background-color: white;
+}

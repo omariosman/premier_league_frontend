@@ -13,7 +13,7 @@ export class TopTeamsShotsComponent implements OnInit {
   top_teams_array: any;
 
   ngOnInit(): void {
-    this.topTeamsSer.get_top_teams_by_matches_won().subscribe(data => {
+    this.topTeamsSer.get_top_teams_by_shots().subscribe(data => {
       this.top_teams_array = data;
     })  }
 

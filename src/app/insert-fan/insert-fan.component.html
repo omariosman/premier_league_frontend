@@ -1,39 +1,55 @@
   
-
-<h2 class="form-heading">Insert Fan</h2>
-    <!-- form -->
-    <form class = "form-body" [formGroup]="form" id="form-body-id">
+<div class="container">
+<h2 class="form-heading" class="header">Insert Fan</h2>
+<button class="button-9" routerLink="/">Go Back</button>
+    
+<!-- form -->
+    <form *ngIf="!isSubmitted" class = "form-body" [formGroup]="form" id="form-body-id">
   
       <!-- Username -->
       <p class = "label-above-text-box">Username</p>
       <div >
-          <input formControlName="username" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+          <input class="my-input" placeholder="Your nickname" formControlName="username" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
       </div>
 
 
       <!-- email -->
       <p class = "label-above-text-box">email</p>
       <div >
-          <input formControlName="email" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+          <input formControlName="email" placeholder="Your email" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
       </div>
   
       <!-- gender -->
+      <!--
       <p class = "label-above-text-box">gender</p>
       <div >
           <input formControlName="gender" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
       </div>
-  
+    -->
+    <p class = "label-above-text-box">gender</p>
+      <div>
+        <select class='select-option'
+            #mySelect
+            (change)='onOptionsSelected(mySelect.value)'>
+            <option>Choose a gender</option>
+        <option class='option' 
+        [value]="0">Male</option>
+        <option class='option' 
+        [value]="1">Female</option>
+        </select>
+      </div>
+
       <!-- birthdate -->
       <p class = "label-above-text-box">birthdate</p>
       <div >
-          <input formControlName="birthdate" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+          <input placeholder="YYYY-mm-dd" formControlName="birthdate" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
       </div>
 
 
     <!-- favorite_team -->
     <p class = "label-above-text-box">favorite_team</p>
     <div >
-        <input formControlName="favorite_team" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
+        <input formControlName="favorite_team" placeholder="Your favorite team" maxlength="30" style="color:#32ac64; font-weight: bold; background-color: transparent !important;">
     </div>
 
     </form>
@@ -45,8 +61,9 @@
     </button>
   
   <div class="submission_recorded">
-    <p *ngIf="isSubmitted" class="btn btn-success">Your Submission has been recorded.</p>
+    <p *ngIf="isSubmitted" class="btn btn-primary">Thank you.</p>
   </div>
+</div>
 
 
   

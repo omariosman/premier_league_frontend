@@ -45,6 +45,8 @@ export class MainServiceService {
 
   get_stadium_info_API = "http://localhost:8000/api/get_stadium_info/";
 
+  all_users_API = "http://localhost:8000/api/all_users/";
+
   constructor(private http: HttpClient) { }
 
   get_all_matches(): Observable<any>{
@@ -141,7 +143,12 @@ export class MainServiceService {
     return this.http.post<any>(this.get_players_with_position_API, jsonresult);
 
   }
+
   
+  get_all_users(): Observable<any>{
+    return this.http.get<any>(this.all_users_API, {})
+
+  }
 }
 
 

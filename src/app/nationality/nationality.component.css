@@ -10,3 +10,9 @@ select {
     margin: 3rem 10rem;
     
 }
+
+.select-option{
+    padding: 20px;
+    color: #04AA6D;
+    background-color: white;
+}
